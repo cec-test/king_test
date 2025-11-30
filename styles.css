@@ -2,22 +2,22 @@
    CSS Variables & Reset
    =================================== */
 :root {
-    --color-primary: #1a1a1a;
-    --color-secondary: #c9a961;
-    --color-accent: #2c2c2c;
-    --color-text: #333333;
-    --color-text-light: #666666;
-    --color-background: #ffffff;
-    --color-background-alt: #f8f8f8;
-    --color-border: #e0e0e0;
+    --color-primary: #0a0a0a;
+    --color-secondary: #4a5f7a;
+    --color-accent: #b8a583;
+    --color-text: #1a1a1a;
+    --color-text-light: #5a5a5a;
+    --color-background: #faf9f6;
+    --color-background-alt: #f0efeb;
+    --color-border: #d4d2cc;
     
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
     
     --transition: all 0.3s ease;
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.16);
 }
 
 * {
@@ -84,8 +84,14 @@ ul {
     font-family: var(--font-heading);
     font-size: 28px;
     font-weight: 900;
-    color: var(--color-secondary);
+    color: var(--color-accent);
     letter-spacing: 2px;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
 }
 
 .nav-menu {
@@ -110,13 +116,13 @@ ul {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     transition: var(--transition);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .nav-link:hover::after,
@@ -150,7 +156,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a2332 100%);
     overflow: hidden;
 }
 
@@ -162,8 +168,8 @@ ul {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(184, 165, 131, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(74, 95, 122, 0.15) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -190,7 +196,7 @@ ul {
     margin-bottom: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    color: var(--color-secondary);
+    color: var(--color-accent);
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
@@ -221,12 +227,12 @@ ul {
 }
 
 .btn-primary {
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     color: var(--color-primary);
 }
 
 .btn-primary:hover {
-    background-color: #d4b76e;
+    background-color: #c9b695;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -263,7 +269,7 @@ ul {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
 }
 
 /* ===================================
@@ -300,7 +306,7 @@ ul {
 
 .card-image {
     height: 250px;
-    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #4a5f7a 0%, #2a3d4f 100%);
     position: relative;
     overflow: hidden;
 }
@@ -314,7 +320,7 @@ ul {
     position: absolute;
     top: 16px;
     left: 16px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     color: var(--color-primary);
     padding: 6px 16px;
     border-radius: 4px;
@@ -379,7 +385,7 @@ ul {
 
 .category-card:hover {
     transform: translateY(-8px);
-    border-color: var(--color-secondary);
+    border-color: var(--color-accent);
     box-shadow: var(--shadow-md);
 }
 
@@ -407,6 +413,10 @@ ul {
     font-weight: 600;
     display: inline-block;
     transition: var(--transition);
+}
+
+.category-link:hover {
+    color: var(--color-accent);
 }
 
 .category-link:hover {
@@ -443,7 +453,7 @@ ul {
 
 .article-image {
     height: 200px;
-    background: linear-gradient(135deg, #3a3a3a 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #4a5f7a 0%, #2a3d4f 100%);
     position: relative;
 }
 
@@ -451,7 +461,7 @@ ul {
     position: absolute;
     top: 12px;
     left: 12px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     color: var(--color-primary);
     padding: 4px 12px;
     border-radius: 4px;
@@ -492,7 +502,7 @@ ul {
    =================================== */
 .newsletter {
     padding: 80px 0;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a2332 100%);
     color: #ffffff;
 }
 
@@ -507,7 +517,7 @@ ul {
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 16px;
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .newsletter p {
@@ -536,7 +546,7 @@ ul {
 
 .newsletter-input:focus {
     outline: none;
-    border-color: var(--color-secondary);
+    border-color: var(--color-accent);
     background-color: rgba(255,255,255,0.15);
 }
 
@@ -564,7 +574,7 @@ ul {
     font-family: var(--font-heading);
     font-size: 24px;
     font-weight: 700;
-    color: var(--color-secondary);
+    color: var(--color-accent);
     margin-bottom: 16px;
 }
 
@@ -572,7 +582,7 @@ ul {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 16px;
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .footer-section p {
@@ -590,7 +600,7 @@ ul {
 }
 
 .footer-section a:hover {
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .social-links {

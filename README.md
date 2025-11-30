@@ -1,10 +1,10 @@
-# KING TEST
+# USURPER
 
 A modern digital magazine for men pursuing excellence in adventure, innovation, conquest, leadership, and philosophy.
 
 ## 🎯 Overview
 
-King Test is a premium online magazine designed to inspire and educate men who are committed to personal growth, achievement, and living with purpose. Our content spans five core pillars:
+Usurper is a premium online magazine designed to inspire and educate men who are committed to personal growth, achievement, and living with purpose. Our content spans five core pillars:
 
 - **⛰️ Adventure** - Pushing boundaries and exploring new frontiers
 - **💡 Innovation** - Cutting-edge ideas and groundbreaking technology
@@ -33,21 +33,25 @@ King Test is a premium online magazine designed to inspire and educate men who a
 
 ```
 king_test/
-├── index.html          # Main landing page
-├── styles.css          # All styling and responsive design
-├── main.js            # Interactive features and animations
-├── README.md          # Project documentation
-└── .gitignore         # Git ignore rules
+├── index.html               # Main landing page
+├── styles.css               # All styling and responsive design
+├── main.js                  # Interactive features and animations
+├── README.md                # Project documentation
+├── .gitignore               # Git ignore rules
+└── assets/
+    └── images/
+        ├── logo.png         # Site logo
+        └── README.md        # Logo upload instructions
 ```
 
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary**: #1a1a1a (Deep Black)
-- **Secondary**: #c9a961 (Royal Gold)
-- **Accent**: #2c2c2c (Charcoal)
-- **Text**: #333333 (Dark Gray)
-- **Background**: #ffffff (White)
+- **Primary**: #0a0a0a (Black)
+- **Secondary**: #4a5f7a (Muted Navy Blue)
+- **Accent**: #b8a583 (Light Muted Gold)
+- **Text**: #1a1a1a (Near Black)
+- **Background**: #faf9f6 (Off-White)
 
 ### Typography
 - **Headings**: Playfair Display (Serif)
@@ -100,7 +104,7 @@ git push origin main
    - Select root folder
    - Save and wait for deployment
 
-Your site will be live at: `https://yourusername.github.io/king_test/`
+Your site will be live at: `https://cec-test.github.io/king_test/`
 
 ## 📝 Customization
 
@@ -118,8 +122,9 @@ Edit the CSS variables in `styles.css`:
 
 ```css
 :root {
-    --color-primary: #1a1a1a;
-    --color-secondary: #c9a961;
+    --color-primary: #0a0a0a;
+    --color-secondary: #4a5f7a;
+    --color-accent: #b8a583;
     /* Add your custom colors */
 }
 ```
@@ -165,4 +170,4 @@ For questions or feedback, please open an issue on GitHub.
 
 ---
 
-**Built with passion for excellence** | © 2025 King Test
+**Built with passion for excellence** | © 2025 Usurper

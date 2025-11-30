@@ -215,5 +215,5 @@ window.addEventListener('scroll', debouncedScrollHandler);
 // ===================================
 // Console Welcome Message
 // ===================================
-console.log('%c KING TEST ', 'background: #c9a961; color: #1a1a1a; font-size: 20px; font-weight: bold; padding: 10px;');
-console.log('%c Welcome to King Test - Where legends are forged ', 'color: #c9a961; font-size: 14px;');
+console.log('%c USURPER ', 'background: #b8a583; color: #0a0a0a; font-size: 20px; font-weight: bold; padding: 10px;');
+console.log('%c Welcome to Usurper - Seize your throne ', 'color: #b8a583; font-size: 14px;');
