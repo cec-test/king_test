@@ -415,11 +415,8 @@
             }
         ];
 
-        // Populate articles
-        const grid = document.getElementById('allArticlesGrid');
-        const activeFilter = document.getElementById('activeFilter');
-        const searchInput = document.getElementById('searchInput');
-        const searchButton = document.getElementById('searchButton');
+        // Declare variables at top level
+        let grid, activeFilter, searchInput, searchButton;
 
         function renderArticles(articlesToShow = allArticles) {
             grid.innerHTML = articlesToShow.map(article => `
@@ -481,28 +478,36 @@
             activeFilter.textContent = `Found ${filtered.length} results for "${searchTerm}"`;
         }
 
-        // Event listeners
-        document.querySelectorAll('.filter-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const category = link.getAttribute('data-filter');
-                filterByCategory(category);
-            });
-        });
-
-        searchButton.addEventListener('click', performSearch);
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') performSearch();
-        });
-
         // Initial render - wait for DOM to be fully loaded
-        if (grid) {
-            renderArticles();
-            addClickHandlers();
-            console.log('Rendered', allArticles.length, 'articles');
-        } else {
-            console.error('Grid element not found!');
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get DOM elements after page loads
+            grid = document.getElementById('allArticlesGrid');
+            activeFilter = document.getElementById('activeFilter');
+            searchInput = document.getElementById('searchInput');
+            searchButton = document.getElementById('searchButton');
+            
+            if (grid) {
+                renderArticles();
+                addClickHandlers();
+                console.log('Rendered', allArticles.length, 'articles');
+                
+                // Event listeners
+                document.querySelectorAll('.filter-link').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const category = link.getAttribute('data-filter');
+                        filterByCategory(category);
+                    });
+                });
+
+                searchButton.addEventListener('click', performSearch);
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') performSearch();
+                });
+            } else {
+                console.error('Grid element not found!');
+            }
+        });
     </script>
 </body>
 </html>
