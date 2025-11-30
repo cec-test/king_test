@@ -132,15 +132,14 @@ function validateEmail(email) {
 // ===================================
 document.querySelectorAll('.featured-card, .article-card').forEach(card => {
     card.addEventListener('click', function() {
-        // In a real implementation, this would navigate to the article page
-        console.log('Article clicked:', this.querySelector('.card-title, .article-title')?.textContent);
-        
-        // Placeholder behavior - you can remove this alert in production
-        const title = this.querySelector('.card-title, .article-title')?.textContent;
-        alert(`Article: "${title}"\n\nIn a full implementation, this would navigate to the article page.`);
+        const articleSlug = this.getAttribute('data-article');
+        if (articleSlug) {
+            window.location.href = `articles/${articleSlug}.html`;
+        }
     });
     
-    // Add hover animation feedback
+    // Add hover animation feedback and cursor
+    card.style.cursor = 'pointer';
     card.addEventListener('mouseenter', function() {
         this.style.transition = 'all 0.3s ease';
     });
