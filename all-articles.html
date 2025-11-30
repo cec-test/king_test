@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Articles - Lethal Ambition</title>
+    <meta name="description" content="Explore all articles on Lethal Ambition - stories of men who shaped history through ambition, innovation, conquest, leadership, and philosophy.">
+    <link rel="stylesheet" href="styles.css?v=2.0">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>LETHAL AMBITION</h1>
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search by keyword...">
+                    <button id="searchButton" class="search-button">🔍</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link filter-link" data-filter="Adventure">Adventure</a></li>
+                <li><a href="#" class="nav-link filter-link" data-filter="Innovation">Innovation</a></li>
+                <li><a href="#" class="nav-link filter-link" data-filter="Conquest">Conquest</a></li>
+                <li><a href="#" class="nav-link filter-link" data-filter="Leadership">Leadership</a></li>
+                <li><a href="#" class="nav-link filter-link" data-filter="Philosophy">Philosophy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding: 120px 0 80px; background: var(--color-primary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <h1 style="font-size: 48px; color: var(--color-background); margin-bottom: 16px;">All Articles</h1>
+                <p style="font-size: 18px; color: rgba(255,255,255,0.8);">Explore stories of men who embodied lethal ambition</p>
+                <div id="activeFilter" style="color: var(--color-accent); font-weight: 600; margin-top: 16px; display: none;"></div>
+            </div>
+
+            <div class="articles-grid" id="allArticlesGrid">
+                <!-- All articles will be populated here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lethal Ambition</h3>
+                    <p>A digital magazine for men pursuing excellence in adventure, innovation, conquest, leadership, and philosophy.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" class="filter-link" data-filter="Adventure">Adventure</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Innovation">Innovation</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Conquest">Conquest</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Leadership">Leadership</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Philosophy">Philosophy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contribute">Write for Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="YouTube">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lethal Ambition. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // All articles data
+        const allArticles = [
+            {
+                slug: 'friedrich-nietzsche',
+                title: 'Friedrich Nietzsche - Will to Power',
+                excerpt: 'Challenged Western morality and religion, proposing the Übermensch concept and radical reevaluation of all values.',
+                category: 'Philosophy',
+                keywords: 'Philosophy,God,Morality,Willpower,Truth,Existentialism,Superman,Nihilism,Critique,Individualism',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.85), rgba(74,74,74,0.7)), url(\'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" opacity="0.1" fill="%23f0afe6">∃</text></svg>\') center/cover',
+                emoji: '📚'
+            },
+            {
+                slug: 'julius-caesar',
+                title: 'Julius Caesar - Absolute Power',
+                excerpt: 'Transformed Rome from republic to empire through military brilliance, political acumen, and popular appeal.',
+                category: 'Conquest',
+                keywords: 'Rome,Conquest,Gaul,Politics,Assassination,Empire,Strategy,Rhetoric,Ambition,Rubicon',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.8), rgba(42,42,42,0.9)), repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(240, 175, 230, 0.08) 15px, rgba(240, 175, 230, 0.08) 30px)',
+                emoji: '⚔️'
+            },
+            {
+                slug: 'alexander-the-great',
+                title: 'Alexander the Great - Boundless Conquest',
+                excerpt: 'Conquered the known world by age 32, spreading Greek culture and creating history\\'s largest empires.',
+                category: 'Conquest',
+                keywords: 'Macedonia,Conquest,Empire,Youth,Strategy,Hellenism,Persia,Legend,Tutorship,Ambition',
+                image: 'linear-gradient(to right, rgba(0,0,0,0.9), rgba(42,42,42,0.85)), repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(240, 175, 230, 0.08) 12px, rgba(240, 175, 230, 0.08) 24px)',
+                emoji: '👑'
+            },
+            {
+                slug: 'leonardo-da-vinci',
+                title: 'Leonardo da Vinci - Renaissance Genius',
+                excerpt: 'Renaissance polymath who merged art and science, creating timeless masterpieces while envisioning future technologies.',
+                category: 'Innovation',
+                keywords: 'Renaissance,Art,Invention,Curiosity,Genius,Anatomy,Engineering,Mona-Lisa,Notebooks,Vision',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.8), rgba(74,74,74,0.85)), radial-gradient(circle at 50% 50%, rgba(240, 175, 230, 0.15), transparent 60%)',
+                emoji: '🎨'
+            },
+            {
+                slug: 'genghis-khan',
+                title: 'Genghis Khan - Empire Builder',
+                excerpt: 'United Mongol tribes to build the largest contiguous land empire through revolutionary military tactics.',
+                category: 'Conquest',
+                keywords: 'Mongolia,Empire,Horsemen,Conquest,Innovation,Meritocracy,Tactics,Legacy,Asia,Unification',
+                image: 'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(26,26,26,0.85)), repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(240, 175, 230, 0.07) 10px, rgba(240, 175, 230, 0.07) 20px)',
+                emoji: '🐎'
+            },
+            {
+                slug: 'aristotle',
+                title: 'Aristotle - Systematic Thinker',
+                excerpt: 'Systematized human knowledge across logic, ethics, politics, and natural sciences, shaping Western thought for millennia.',
+                category: 'Philosophy',
+                keywords: 'Logic,Ethics,Philosophy,Science,Teaching,Reason,Politics,Metaphysics,Knowledge,Influence',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.9), rgba(74,74,74,0.8)), linear-gradient(45deg, transparent 30%, rgba(240, 175, 230, 0.08) 30%, rgba(240, 175, 230, 0.08) 70%, transparent 70%); background-size: 100%, 50px 50px',
+                emoji: '📖'
+            },
+            {
+                slug: 'ernest-shackleton',
+                title: 'Ernest Shackleton - Endurance Leader',
+                excerpt: 'Led all 27 crew to safety after Antarctic disaster, exemplifying leadership under impossible conditions.',
+                category: 'Adventure',
+                keywords: 'Antarctica,Endurance,Leadership,Survival,Crisis,Courage,Navigation,Team,Adversity,Rescue',
+                image: 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(42,42,42,0.7)), radial-gradient(circle at 30% 70%, rgba(240, 175, 230, 0.1), transparent 60%)',
+                emoji: '🧊'
+            },
+            {
+                slug: 'albert-einstein',
+                title: 'Albert Einstein - Revolutionary Mind',
+                excerpt: 'Revolutionized physics with theory of relativity, fundamentally changing our understanding of space, time, and energy.',
+                category: 'Innovation',
+                keywords: 'Relativity,Physics,E=mc²,Genius,Nobel,Quantum,Space-time,Innovation,Theory,Imagination',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.85), rgba(74,74,74,0.75)), radial-gradient(circle at 60% 40%, rgba(240, 175, 230, 0.2), transparent 50%)',
+                emoji: '⚛️'
+            },
+            {
+                slug: 'mahatma-gandhi',
+                title: 'Mahatma Gandhi - Peaceful Revolution',
+                excerpt: 'Led India to independence through nonviolent resistance, proving peaceful protest could topple empires.',
+                category: 'Leadership',
+                keywords: 'Nonviolence,Independence,India,Civil-disobedience,Peace,Resistance,Empire,Salt-march,Philosophy,Freedom',
+                image: 'linear-gradient(to right, rgba(0,0,0,0.85), rgba(26,26,26,0.9)), repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(240, 175, 230, 0.06) 10px, rgba(240, 175, 230, 0.06) 20px)',
+                emoji: '🕊️'
+            },
+            {
+                slug: 'martin-luther-king-jr',
+                title: 'Martin Luther King Jr. - Dream Defender',
+                excerpt: 'Advanced civil rights through powerful oratory and nonviolent action, reshaping American society.',
+                category: 'Leadership',
+                keywords: 'Civil-rights,Equality,Speech,Nonviolence,Justice,Dream,March,Montgomery,Courage,Legacy',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.9), rgba(42,42,42,0.85)), linear-gradient(90deg, transparent 45%, rgba(240, 175, 230, 0.08) 45%, rgba(240, 175, 230, 0.08) 55%, transparent 55%); background-size: 100%, 30px 30px',
+                emoji: '✊'
+            },
+            {
+                slug: 'isaac-newton',
+                title: 'Isaac Newton - Laws of Nature',
+                excerpt: 'Laid foundations of classical mechanics and calculus, establishing scientific laws that governed physics for centuries.',
+                category: 'Innovation',
+                keywords: 'Gravity,Calculus,Laws,Motion,Optics,Mathematics,Apple,Principia,Science,Revolution',
+                image: 'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(26,26,26,0.85)), radial-gradient(circle at 50% 50%, rgba(240, 175, 230, 0.15), transparent 70%)',
+                emoji: '🍎'
+            },
+            {
+                slug: 'charles-darwin',
+                title: 'Charles Darwin - Evolution Architect',
+                excerpt: 'Proposed natural selection as evolution\\'s mechanism, fundamentally altering humanity\\'s understanding of life.',
+                category: 'Innovation',
+                keywords: 'Evolution,Selection,Species,Beagle,Biology,Origin,Adaptation,Theory,Natural,Science',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.85), rgba(42,42,42,0.9)), repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(240, 175, 230, 0.06) 8px, rgba(240, 175, 230, 0.06) 16px)',
+                emoji: '🧬'
+            },
+            {
+                slug: 'winston-churchill',
+                title: 'Winston Churchill - Defiant Bulldog',
+                excerpt: 'Led Britain through World War II with indomitable spirit and oratory, preserving democracy against totalitarian conquest.',
+                category: 'Leadership',
+                keywords: 'WWII,Britain,Leadership,Speeches,Bulldog,Resolve,Nazi,Victory,Cigar,Democracy',
+                image: 'linear-gradient(to right, rgba(0,0,0,0.9), rgba(42,42,42,0.85)), linear-gradient(0deg, transparent 40%, rgba(240, 175, 230, 0.08) 40%, rgba(240, 175, 230, 0.08) 60%, transparent 60%)',
+                emoji: '🎖️'
+            },
+            {
+                slug: 'nikola-tesla',
+                title: 'Nikola Tesla - Electric Visionary',
+                excerpt: 'Pioneered alternating current and wireless technology, envisioning an electrified future decades ahead.',
+                category: 'Innovation',
+                keywords: 'Electricity,AC,Wireless,Innovation,Coil,Genius,Vision,Radio,Power,Future',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.9), rgba(26,26,26,0.85)), radial-gradient(circle at 30% 30%, rgba(240, 175, 230, 0.18), transparent 65%)',
+                emoji: '⚡'
+            },
+            {
+                slug: 'muhammad',
+                title: 'Muhammad - Prophet Unifier',
+                excerpt: 'Founded Islam and united Arabian tribes, creating a religion that shaped world history for 1,400 years.',
+                category: 'Leadership',
+                keywords: 'Islam,Prophet,Quran,Mecca,Medina,Faith,Unity,Religion,Revelation,Civilization',
+                image: 'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(26,26,26,0.9)), repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(240, 175, 230, 0.06) 10px, rgba(240, 175, 230, 0.06) 20px)',
+                emoji: '☪️'
+            },
+            {
+                slug: 'confucius',
+                title: 'Confucius - Ethical Foundation',
+                excerpt: 'Established philosophy that governed Chinese civilization for millennia, emphasizing virtue and harmony.',
+                category: 'Philosophy',
+                keywords: 'Ethics,China,Wisdom,Virtue,Teaching,Harmony,Analects,Filial-piety,Order,Tradition',
+                image: 'linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.85)), radial-gradient(circle at 25% 75%, rgba(240, 175, 230, 0.1), transparent 55%)',
+                emoji: '☯️'
+            },
+            {
+                slug: 'galileo-galilei',
+                title: 'Galileo Galilei - Truth Seeker',
+                excerpt: 'Championed heliocentrism and pioneered telescopic astronomy, establishing experimental science despite persecution.',
+                category: 'Innovation',
+                keywords: 'Telescope,Astronomy,Heliocentrism,Experiment,Inquisition,Jupiter,Science,Observation,Physics,Courage',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.85), rgba(26,26,26,0.9)), repeating-linear-gradient(45deg, transparent 0px, transparent 8px, rgba(240, 175, 230, 0.05) 8px, rgba(240, 175, 230, 0.05) 16px)',
+                emoji: '🔭'
+            },
+            {
+                slug: 'thomas-edison',
+                title: 'Thomas Edison - Persistent Inventor',
+                excerpt: 'Invented the practical light bulb and phonograph, creating the first industrial research laboratory.',
+                category: 'Innovation',
+                keywords: 'Light-bulb,Invention,Laboratory,Electricity,Phonograph,Patents,Innovation,Menlo-Park,Industry,Persistence',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.9), rgba(42,42,42,0.85)), radial-gradient(circle at 70% 30%, rgba(240, 175, 230, 0.12), transparent 65%)',
+                emoji: '💡'
+            },
+            {
+                slug: 'nelson-mandela',
+                title: 'Nelson Mandela - Forgiveness Force',
+                excerpt: 'Emerged from 27 years imprisonment to lead South Africa from apartheid to democracy through reconciliation.',
+                category: 'Leadership',
+                keywords: 'Apartheid,Freedom,Reconciliation,Prison,Democracy,Forgiveness,Leadership,Rainbow-nation,Justice,Peace',
+                image: 'linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.95)), linear-gradient(45deg, transparent 30%, rgba(240, 175, 230, 0.06) 30%, rgba(240, 175, 230, 0.06) 70%, transparent 70%); background-size: 100%, 40px 40px',
+                emoji: '✌️'
+            },
+            {
+                slug: 'socrates',
+                title: 'Socrates - Question Everything',
+                excerpt: 'Pioneered critical thinking and the Socratic method, laying foundations for Western philosophy through relentless questioning.',
+                category: 'Philosophy',
+                keywords: 'Philosophy,Questions,Athens,Wisdom,Method,Dialogue,Ethics,Trial,Hemlock,Teaching',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.9), rgba(74,74,74,0.8)), repeating-linear-gradient(90deg, transparent, transparent 12px, rgba(240, 175, 230, 0.05) 12px, rgba(240, 175, 230, 0.05) 24px)',
+                emoji: '🏛️'
+            },
+            {
+                slug: 'henry-ford',
+                title: 'Henry Ford - Assembly Innovator',
+                excerpt: 'Revolutionized manufacturing with assembly line production, making automobiles affordable and transforming industry.',
+                category: 'Innovation',
+                keywords: 'Assembly-line,Automobile,Model-T,Manufacturing,Innovation,Mass-production,Industry,Workers,Efficiency,Revolution',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.85), rgba(26,26,26,0.9)), linear-gradient(0deg, transparent 40%, rgba(240, 175, 230, 0.05) 40%, rgba(240, 175, 230, 0.05) 60%, transparent 60%)',
+                emoji: '🚗'
+            },
+            {
+                slug: 'wright-brothers',
+                title: 'Wright Brothers - Flight Pioneers',
+                excerpt: 'Achieved first powered flight through methodical experimentation, opening the age of aviation.',
+                category: 'Adventure',
+                keywords: 'Flight,Aviation,Kitty-Hawk,Innovation,Brothers,Airplane,Experiment,Pioneers,Engineering,Dreams',
+                image: 'linear-gradient(to top, rgba(0,0,0,0.9), rgba(42,42,42,0.7)), radial-gradient(circle at 50% 60%, rgba(240, 175, 230, 0.1), transparent 60%)',
+                emoji: '✈️'
+            },
+            {
+                slug: 'attila-the-hun',
+                title: 'Attila the Hun - Scourge of Rome',
+                excerpt: 'Terrorized the Roman Empire with ruthless cavalry tactics, extracting massive tribute through fear.',
+                category: 'Conquest',
+                keywords: 'Huns,Terror,Rome,Cavalry,Conquest,Tribute,Raids,Barbarian,Invasion,Scourge',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.9), rgba(42,42,42,0.8)), repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(240, 175, 230, 0.08) 15px, rgba(240, 175, 230, 0.08) 30px)',
+                emoji: '🐎'
+            },
+            {
+                slug: 'john-d-rockefeller',
+                title: 'John D. Rockefeller - Monopoly Architect',
+                excerpt: 'Built Standard Oil into America\\'s first monopoly through ruthless competition and strategic dominance.',
+                category: 'Innovation',
+                keywords: 'Oil,Monopoly,Wealth,Ruthless,Standard-Oil,Competition,Titan,Industry,Dominance,Tycoon',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.85), rgba(26,26,26,0.95)), radial-gradient(circle at 70% 30%, rgba(240, 175, 230, 0.15), transparent 60%)',
+                emoji: '💰'
+            },
+            {
+                slug: 'hernan-cortes',
+                title: 'Hernán Cortés - Audacious Conqueror',
+                excerpt: 'Conquered the Aztec Empire with 600 men through cunning alliances and psychological warfare.',
+                category: 'Conquest',
+                keywords: 'Conquistador,Aztec,Mexico,Conquest,Audacity,Gold,Empire,Destruction,Strategy,Ruthless',
+                image: 'linear-gradient(to right, rgba(0,0,0,0.9), rgba(42,42,42,0.85)), linear-gradient(45deg, transparent 45%, rgba(240, 175, 230, 0.1) 45%, rgba(240, 175, 230, 0.1) 55%, transparent 55%); background-size: 100%, 30px 30px',
+                emoji: '⚔️'
+            },
+            {
+                slug: 'andrew-carnegie',
+                title: 'Andrew Carnegie - Steel Magnate',
+                excerpt: 'Dominated American steel industry through vertical integration and ruthless cost-cutting efficiency.',
+                category: 'Innovation',
+                keywords: 'Steel,Industry,Wealth,Competition,Integration,Labor,Philanthropy,Ruthless,Empire,Tycoon',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.9), rgba(74,74,74,0.85)), repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(240, 175, 230, 0.06) 10px, rgba(240, 175, 230, 0.06) 20px)',
+                emoji: '🏭'
+            },
+            {
+                slug: 'jp-morgan',
+                title: 'J.P. Morgan - Financial Titan',
+                excerpt: 'Consolidated American finance into massive trusts, wielding power to bail out the US government itself.',
+                category: 'Leadership',
+                keywords: 'Banking,Finance,Power,Trusts,Wall-Street,Consolidation,Influence,Control,Capital,Empire',
+                image: 'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(26,26,26,0.85)), radial-gradient(circle at 40% 40%, rgba(240, 175, 230, 0.12), transparent 70%)',
+                emoji: '🏦'
+            },
+            {
+                slug: 'cornelius-vanderbilt',
+                title: 'Cornelius Vanderbilt - Railroad Baron',
+                excerpt: 'Built transportation empire through shipping and railroads using price wars and crushing competition.',
+                category: 'Innovation',
+                keywords: 'Railroads,Shipping,Ruthless,Competition,Commodore,Transportation,Wealth,Monopoly,Power,Empire',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.85), rgba(42,42,42,0.9)), linear-gradient(90deg, transparent 40%, rgba(240, 175, 230, 0.07) 40%, rgba(240, 175, 230, 0.07) 60%, transparent 60%)',
+                emoji: '🚂'
+            },
+            {
+                slug: 'shaka-zulu',
+                title: 'Shaka Zulu - Military Innovator',
+                excerpt: 'Transformed Zulu tribe into military machine through brutal discipline and revolutionary tactics.',
+                category: 'Conquest',
+                keywords: 'Zulu,Military,Tactics,Conquest,Discipline,Africa,Innovation,Warfare,Empire,Ruthless',
+                image: 'linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.85)), repeating-linear-gradient(45deg, transparent 0px, transparent 12px, rgba(240, 175, 230, 0.08) 12px, rgba(240, 175, 230, 0.08) 24px)',
+                emoji: '🛡️'
+            },
+            {
+                slug: 'tamerlane',
+                title: 'Tamerlane - Terror Incarnate',
+                excerpt: 'Built empire through systematic terror and mass slaughter, erecting pyramids of skulls to surpass Genghis Khan.',
+                category: 'Conquest',
+                keywords: 'Conquest,Terror,Empire,Destruction,Skulls,Ruthless,Central-Asia,Slaughter,Ambition,Legacy',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.95), rgba(26,26,26,0.9)), radial-gradient(circle at 25% 75%, rgba(240, 175, 230, 0.1), transparent 60%)',
+                emoji: '☠️'
+            },
+            {
+                slug: 'alexander-hamilton',
+                title: 'Alexander Hamilton - Founding Architect',
+                excerpt: 'Architect of American financial system who ruthlessly centralized federal power and established national bank.',
+                category: 'Leadership',
+                keywords: 'Finance,Federalist,Banking,Ambition,Duel,Constitution,Power,Economy,Politics,Vision',
+                image: 'linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(42,42,42,0.9)), repeating-linear-gradient(90deg, transparent, transparent 14px, rgba(240, 175, 230, 0.06) 14px, rgba(240, 175, 230, 0.06) 28px)',
+                emoji: '📜'
+            },
+            {
+                slug: 'cecil-rhodes',
+                title: 'Cecil Rhodes - Colonial Titan',
+                excerpt: 'Built diamond empire in Africa through exploitation and conquest, literally naming countries after himself.',
+                category: 'Conquest',
+                keywords: 'Diamonds,Colonialism,Africa,Rhodesia,Empire,Mining,Wealth,Expansion,Ambition,Domination',
+                image: 'linear-gradient(135deg, rgba(0,0,0,0.9), rgba(74,74,74,0.85)), radial-gradient(circle at 60% 40%, rgba(240, 175, 230, 0.15), transparent 65%)',
+                emoji: '💎'
+            }
+        ];
+
+        // Populate articles
+        const grid = document.getElementById('allArticlesGrid');
+        const activeFilter = document.getElementById('activeFilter');
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+
+        function renderArticles(articlesToShow = allArticles) {
+            grid.innerHTML = articlesToShow.map(article => `
+                <article class="article-card" data-article="${article.slug}" data-category="${article.category}" data-keywords="${article.keywords}" style="cursor: pointer;" onclick="window.location.href='articles/${article.slug}.html'">
+                    <div class="article-image" style="background: ${article.image}; display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">${article.category}</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">${article.emoji}</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">${article.title}</h3>
+                        <p class="article-excerpt">${article.excerpt}</p>
+                        <div class="article-meta">
+                            <span class="article-date">${article.keywords.split(',').slice(0, 3).join(', ')}</span>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // Filter by category
+        function filterByCategory(category) {
+            const filtered = allArticles.filter(a => a.category === category);
+            renderArticles(filtered);
+            activeFilter.style.display = 'block';
+            activeFilter.textContent = `Showing ${category} (${filtered.length} articles)`;
+            searchInput.value = '';
+        }
+
+        // Search functionality
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            
+            if (!searchTerm) {
+                renderArticles();
+                activeFilter.style.display = 'none';
+                return;
+            }
+            
+            const filtered = allArticles.filter(article => {
+                const searchText = (article.keywords + ' ' + article.title + ' ' + article.excerpt).toLowerCase();
+                return searchText.includes(searchTerm);
+            });
+            
+            renderArticles(filtered);
+            activeFilter.style.display = 'block';
+            activeFilter.textContent = `Found ${filtered.length} results for "${searchTerm}"`;
+        }
+
+        // Event listeners
+        document.querySelectorAll('.filter-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const category = link.getAttribute('data-filter');
+                filterByCategory(category);
+            });
+        });
+
+        searchButton.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        // Initial render
+        renderArticles();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
