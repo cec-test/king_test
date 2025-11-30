@@ -89,10 +89,10 @@ ul {
 }
 
 .logo img {
-    height: 35px;
+    height: 70px;
     width: auto;
     display: block;
-    max-width: 120px;
+    max-width: 240px;
     object-fit: contain;
 }
 
@@ -289,7 +289,7 @@ ul {
 }
 
 .featured-card {
-    background-color: #ffffff;
+    background-color: var(--color-background);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
@@ -376,7 +376,7 @@ ul {
 }
 
 .category-card {
-    background-color: #ffffff;
+    background-color: var(--color-background);
     padding: 40px 32px;
     border-radius: 8px;
     text-align: center;
@@ -440,7 +440,7 @@ ul {
 }
 
 .article-card {
-    background-color: #ffffff;
+    background-color: var(--color-background);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
