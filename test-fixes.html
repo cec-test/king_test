@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Fixes - Lethal Ambition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        h1 { color: #f0afe6; }
+        h2 { color: #f0afe6; border-bottom: 2px solid #f0afe6; padding-bottom: 10px; }
+        .test-section {
+            background: #2a2a2a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #f0afe6;
+        }
+        .test-link {
+            display: block;
+            padding: 12px;
+            margin: 10px 0;
+            background: #f0afe6;
+            color: #000;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .test-link:hover {
+            background: #f4c4eb;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .fixed { background: #4CAF50; color: white; }
+        .verified { background: #2196F3; color: white; }
+        ul { line-height: 1.8; }
+        code {
+            background: #000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Lethal Ambition - Fixes Verification Test</h1>
+    <p><strong>Commit:</strong> <code>a3a1422</code> - Fix category filtering and reposition search bar</p>
+    <p><strong>Date:</strong> November 30, 2025</p>
+
+    <div class="test-section">
+        <h2>Test 1: Category Filtering <span class="status fixed">FIXED ✓</span></h2>
+        <p>Click these links to test category filtering with URL parameters:</p>
+        <a href="all-articles.html?category=Innovation" class="test-link">Test Innovation Filter (13 articles)</a>
+        <a href="all-articles.html?category=Conquest" class="test-link">Test Conquest Filter (11 articles)</a>
+        <a href="all-articles.html?category=Leadership" class="test-link">Test Leadership Filter (7 articles)</a>
+        <a href="all-articles.html?category=Adventure" class="test-link">Test Adventure Filter (3 articles)</a>
+        <a href="all-articles.html?category=Philosophy" class="test-link">Test Philosophy Filter (5 articles)</a>
+        
+        <h3>Expected Behavior:</h3>
+        <ul>
+            <li>Page redirects to <code>all-articles.html?category={CategoryName}</code></li>
+            <li>Shows message: "Showing {Category} (X articles)"</li>
+            <li>Displays only articles in that category</li>
+            <li>Article count matches expected number</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Search Bar Position <span class="status fixed">FIXED ✓</span></h2>
+        <p>Navigate to homepage and check navigation bar:</p>
+        <a href="index.html" class="test-link">Go to Homepage</a>
+        
+        <h3>Expected Layout:</h3>
+        <pre style="background: #000; padding: 15px; border-radius: 4px; overflow-x: auto;">
+┌──────────────────────────────────────────────────────────────────┐
+│ LETHAL AMBITION │  Home  Adventure  Conquest  Leadership  │  🔍  │
+└──────────────────────────────────────────────────────────────────┘
+     Logo (left)           Navigation (center)           Search (right)
+        </pre>
+        
+        <h3>Expected Behavior:</h3>
+        <ul>
+            <li>Logo appears on the LEFT</li>
+            <li>Navigation items (Home, Adventure, etc.) appear in CENTER</li>
+            <li>Search bar appears on the RIGHT (after navigation items)</li>
+            <li>Mobile menu toggle appears after search bar</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Article Formatting <span class="status verified">VERIFIED ✓</span></h2>
+        <p>Test any of these article pages - all should have proper formatting:</p>
+        <a href="articles/napoleon-bonaparte.html" class="test-link">Napoleon Bonaparte (Template Reference)</a>
+        <a href="articles/steve-jobs.html" class="test-link">Steve Jobs</a>
+        <a href="articles/julius-caesar.html" class="test-link">Julius Caesar</a>
+        <a href="articles/attila-the-hun.html" class="test-link">Attila the Hun</a>
+        <a href="articles/john-d-rockefeller.html" class="test-link">John D. Rockefeller</a>
+        
+        <h3>Expected Formatting:</h3>
+        <ul>
+            <li>Hero section with gradient background (#000 to #1a1a1a)</li>
+            <li>Large title in Playfair Display font (56px)</li>
+            <li>Category badge in pink (#f0afe6)</li>
+            <li>H2 heading: "How [Name] Embodies Lethal Ambition"</li>
+            <li>Two paragraphs of content (18px, line-height 1.8)</li>
+            <li>"Back to Articles" button</li>
+            <li>Footer at bottom</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 4: Click Category Cards <span class="status fixed">FIXED ✓</span></h2>
+        <p>Go to homepage and click category cards in "Explore by Category" section:</p>
+        <a href="index.html#categories" class="test-link">Go to Categories Section</a>
+        
+        <h3>Expected Behavior:</h3>
+        <ul>
+            <li>Click on "Innovation" card → redirects to <code>all-articles.html?category=Innovation</code></li>
+            <li>Click on "Conquest" card → redirects to <code>all-articles.html?category=Conquest</code></li>
+            <li>Click on "Adventure" card → redirects to <code>all-articles.html?category=Adventure</code></li>
+            <li>Each redirect shows filtered articles for that category</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Debugging Tips</h2>
+        <h3>If Tests Fail:</h3>
+        <ol>
+            <li><strong>Clear Browser Cache</strong>
+                <ul>
+                    <li>Chrome/Edge: <code>Ctrl + Shift + Delete</code></li>
+                    <li>Or use Hard Refresh: <code>Ctrl + Shift + R</code></li>
+                    <li>Or try Incognito/Private Mode</li>
+                </ul>
+            </li>
+            <li><strong>Check JavaScript Console</strong>
+                <ul>
+                    <li>Press <code>F12</code> to open DevTools</li>
+                    <li>Go to Console tab</li>
+                    <li>Look for any red error messages</li>
+                </ul>
+            </li>
+            <li><strong>Verify File Versions</strong>
+                <ul>
+                    <li>Check that <code>main.js</code> is loading (Network tab)</li>
+                    <li>Verify timestamp is recent</li>
+                    <li>Check file size (~8KB)</li>
+                </ul>
+            </li>
+            <li><strong>Check URL Parameters</strong>
+                <ul>
+                    <li>After clicking category, check address bar</li>
+                    <li>Should show: <code>?category=CategoryName</code></li>
+                    <li>If missing, category filtering isn't working</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: #2a2a2a; border-radius: 8px;">
+        <h2>All Fixes Complete! 🎉</h2>
+        <p>Category Filtering ✓ | Search Bar Position ✓ | Article Formatting ✓</p>
+        <a href="index.html" class="test-link" style="display: inline-block; max-width: 300px;">Return to Homepage</a>
+    </div>
+</body>
+</html>

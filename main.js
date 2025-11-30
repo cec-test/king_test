@@ -148,17 +148,9 @@ document.querySelectorAll('.featured-card, .article-card').forEach(card => {
 // ===================================
 // Category Cards Click Handlers
 // ===================================
-document.querySelectorAll('.category-card').forEach(card => {
-    card.addEventListener('click', function(e) {
-        // Don't trigger if clicking the link directly
-        if (e.target.classList.contains('category-link')) return;
-        
-        const link = this.querySelector('.category-link');
-        if (link) {
-            link.click();
-        }
-    });
-});
+// NOTE: Category card click handling is done below in the
+// "Category Filtering - Redirect to All Articles Page" section
+// to enable proper filtering with URL parameters
 
 // ===================================
 // Intersection Observer for Fade-in Animations
