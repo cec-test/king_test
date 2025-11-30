@@ -85,6 +85,7 @@ ul {
     align-items: center;
     gap: 16px;
     margin-left: auto;
+    flex-shrink: 0;
 }
 
 .search-container {
@@ -142,6 +143,9 @@ ul {
     display: flex;
     gap: 32px;
     align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
@@ -690,7 +694,7 @@ ul {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-menu {
         position: absolute;
         top: 100%;
@@ -705,6 +709,7 @@ ul {
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
+        z-index: 999;
     }
     
     .nav-menu.active {
