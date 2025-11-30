@@ -89,9 +89,11 @@ ul {
 }
 
 .logo img {
-    height: 45px;
+    height: 40px;
     width: auto;
     display: block;
+    max-width: 150px;
+    object-fit: contain;
 }
 
 .nav-menu {
