@@ -19,11 +19,17 @@
             <div class="logo">
                 <h1>LETHAL AMBITION</h1>
             </div>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search by keyword...">
+                    <button id="searchButton" class="search-button">🔍</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#adventure" class="nav-link">Adventure</a></li>
@@ -150,9 +156,12 @@
     <!-- Latest Articles -->
     <section class="latest-articles">
         <div class="container">
-            <h2 class="section-title">Latest Articles</h2>
-            <div class="articles-grid">
-                <article class="article-card" data-article="friedrich-nietzsche">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 48px;">
+                <h2 class="section-title" style="margin-bottom: 0;">Latest Articles</h2>
+                <div id="activeFilter" style="color: var(--color-accent); font-weight: 600; display: none;"></div>
+            </div>
+            <div class="articles-grid" id="articlesGrid">
+                <article class="article-card" data-article="friedrich-nietzsche" data-category="Philosophy" data-keywords="Philosophy,God,Morality,Willpower,Truth,Existentialism,Superman,Nihilism,Critique,Individualism">
                     <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(74,74,74,0.7)), url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\"50\" font-size=\"60\" opacity=\"0.1\" fill=\"%23f0afe6\">∃</text></svg>') center/cover; display: flex; align-items: center; justify-content: center;">
                         <div class="article-category">Philosophy</div>
                         <div style="font-size: 60px; opacity: 0.15; position: absolute;">📚</div>
@@ -375,8 +384,17 @@
                         </div>
                     </div>
                 </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="all-articles.html" class="btn btn-primary" style="text-decoration: none;">Explore All Articles</a>
+            </div>
+        </div>
+    </section>
 
-                <article class="article-card" data-article="galileo-galilei">
+    <!-- Hidden articles for filtering (will be shown/hidden by JavaScript) -->
+    <div style="display: none;" id="hiddenArticles">
+        <article class="article-card" data-article="galileo-galilei">
                     <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(26,26,26,0.9)), repeating-linear-gradient(45deg, transparent 0px, transparent 8px, rgba(240, 175, 230, 0.05) 8px, rgba(240, 175, 230, 0.05) 16px); display: flex; align-items: center; justify-content: center;">
                         <div class="article-category">Innovation</div>
                         <div style="font-size: 60px; opacity: 0.2; position: absolute;">🔭</div>

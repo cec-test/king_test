@@ -212,6 +212,102 @@ const debouncedScrollHandler = debounce(function() {
 window.addEventListener('scroll', debouncedScrollHandler);
 
 // ===================================
+// Search Functionality
+// ===================================
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+const articlesGrid = document.getElementById('articlesGrid');
+const activeFilter = document.getElementById('activeFilter');
+
+function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const articles = document.querySelectorAll('.article-card');
+    let visibleCount = 0;
+    
+    if (!searchTerm) {
+        // Show all articles
+        articles.forEach(article => {
+            article.style.display = 'block';
+        });
+        activeFilter.style.display = 'none';
+        return;
+    }
+    
+    articles.forEach(article => {
+        const keywords = article.getAttribute('data-keywords') || '';
+        const title = article.querySelector('.article-title')?.textContent || '';
+        const excerpt = article.querySelector('.article-excerpt')?.textContent || '';
+        
+        const searchText = (keywords + ' ' + title + ' ' + excerpt).toLowerCase();
+        
+        if (searchText.includes(searchTerm)) {
+            article.style.display = 'block';
+            visibleCount++;
+        } else {
+            article.style.display = 'none';
+        }
+    });
+    
+    activeFilter.style.display = 'block';
+    activeFilter.textContent = `Found ${visibleCount} results for "${searchTerm}"`;
+}
+
+if (searchButton) {
+    searchButton.addEventListener('click', performSearch);
+}
+
+if (searchInput) {
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+}
+
+// ===================================
+// Category Filtering
+// ===================================
+document.querySelectorAll('.category-card').forEach(card => {
+    const originalClickHandler = card.onclick;
+    
+    card.addEventListener('click', function(e) {
+        // Don't trigger if clicking the link directly
+        if (e.target.classList.contains('category-link')) return;
+        
+        const categoryTitle = this.querySelector('h3')?.textContent;
+        if (!categoryTitle || categoryTitle === 'All Topics') {
+            // Show all articles
+            document.querySelectorAll('.article-card').forEach(article => {
+                article.style.display = 'block';
+            });
+            activeFilter.style.display = 'none';
+            searchInput.value = '';
+        } else {
+            // Filter by category
+            const articles = document.querySelectorAll('.article-card');
+            let visibleCount = 0;
+            
+            articles.forEach(article => {
+                const articleCategory = article.getAttribute('data-category');
+                if (articleCategory === categoryTitle) {
+                    article.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+            
+            activeFilter.style.display = 'block';
+            activeFilter.textContent = `Showing ${categoryTitle} (${visibleCount} articles)`;
+            searchInput.value = '';
+            
+            // Scroll to articles
+            document.getElementById('articlesGrid').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// ===================================
 // Console Welcome Message
 // ===================================
 console.log('%c LETHAL AMBITION ', 'background: #f0afe6; color: #000000; font-size: 20px; font-weight: bold; padding: 10px;');
