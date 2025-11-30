@@ -482,9 +482,13 @@
             if (e.key === 'Enter') performSearch();
         });
 
-        // Initial render
-        renderArticles();
+        // Initial render - wait for DOM to be fully loaded
+        if (grid) {
+            renderArticles();
+            console.log('Rendered', allArticles.length, 'articles');
+        } else {
+            console.error('Grid element not found!');
+        }
     </script>
-    <script src="main.js"></script>
 </body>
 </html>
