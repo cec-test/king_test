@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="King Test - A modern magazine for men focused on adventure, innovation, conquest, leadership, and philosophy">
+    <meta name="keywords" content="adventure, innovation, conquest, leadership, philosophy, men's magazine">
+    <meta name="author" content="King Test">
+    <title>King Test | Adventure, Innovation, Conquest, Leadership & Philosophy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>KING TEST</h1>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#adventure" class="nav-link">Adventure</a></li>
+                <li><a href="#innovation" class="nav-link">Innovation</a></li>
+                <li><a href="#conquest" class="nav-link">Conquest</a></li>
+                <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Forge Your Legacy</h1>
+                <p class="hero-subtitle">Where adventure meets wisdom, and ambition fuels greatness</p>
+                <a href="#featured" class="btn btn-primary">Explore Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Stories</h2>
+            <div class="featured-grid">
+                <article class="featured-card featured-card-large">
+                    <div class="card-image">
+                        <div class="card-category">Adventure</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Conquering the Unknown</h3>
+                        <p class="card-excerpt">Journey into uncharted territories where the modern explorer finds purpose, challenge, and transformation.</p>
+                        <div class="card-meta">
+                            <span class="card-date">Nov 30, 2025</span>
+                            <span class="card-read-time">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="featured-card">
+                    <div class="card-image">
+                        <div class="card-category">Leadership</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">The Art of Command</h3>
+                        <p class="card-excerpt">Leadership principles from history's greatest commanders.</p>
+                        <div class="card-meta">
+                            <span class="card-date">Nov 29, 2025</span>
+                            <span class="card-read-time">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="featured-card">
+                    <div class="card-image">
+                        <div class="card-category">Innovation</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Building Tomorrow</h3>
+                        <p class="card-excerpt">Pioneering minds shaping the future of technology.</p>
+                        <div class="card-meta">
+                            <span class="card-date">Nov 28, 2025</span>
+                            <span class="card-read-time">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explore by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" id="adventure">
+                    <div class="category-icon">⛰️</div>
+                    <h3>Adventure</h3>
+                    <p>Pushing boundaries, exploring new frontiers, and embracing the unknown with courage and determination.</p>
+                    <a href="#adventure-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card" id="innovation">
+                    <div class="category-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>Cutting-edge ideas, groundbreaking technology, and the visionaries reshaping our world.</p>
+                    <a href="#innovation-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card" id="conquest">
+                    <div class="category-icon">🏆</div>
+                    <h3>Conquest</h3>
+                    <p>Achieving greatness through strategic thinking, relentless pursuit, and unwavering commitment.</p>
+                    <a href="#conquest-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card" id="leadership">
+                    <div class="category-icon">👑</div>
+                    <h3>Leadership</h3>
+                    <p>Mastering the art of influence, building powerful teams, and leading with vision and integrity.</p>
+                    <a href="#leadership-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card" id="philosophy">
+                    <div class="category-icon">📚</div>
+                    <h3>Philosophy</h3>
+                    <p>Timeless wisdom, profound questions, and the ideas that shape a meaningful and purposeful life.</p>
+                    <a href="#philosophy-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🎯</div>
+                    <h3>All Topics</h3>
+                    <p>Discover the full collection of stories, insights, and perspectives from King Test.</p>
+                    <a href="#all-articles" class="category-link">Explore All →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="latest-articles">
+        <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-category">Philosophy</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Stoicism in Modern Times</h3>
+                        <p class="article-excerpt">How ancient philosophy guides contemporary decision-making and builds resilience in an uncertain world.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Nov 27, 2025</span>
+                            <span class="article-read-time">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-category">Conquest</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">The Entrepreneur's Mindset</h3>
+                        <p class="article-excerpt">Building empires in the digital age through strategic vision and calculated risk-taking.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Nov 26, 2025</span>
+                            <span class="article-read-time">9 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-category">Adventure</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Solo Expeditions</h3>
+                        <p class="article-excerpt">Finding yourself in the wilderness: lessons from those who venture alone.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Nov 25, 2025</span>
+                            <span class="article-read-time">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-category">Innovation</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">AI and Human Potential</h3>
+                        <p class="article-excerpt">Exploring the intersection of artificial intelligence and human capability.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Nov 24, 2025</span>
+                            <span class="article-read-time">10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-category">Leadership</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Leading Through Crisis</h3>
+                        <p class="article-excerpt">How great leaders navigate uncertainty and inspire teams during challenging times.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Nov 23, 2025</span>
+                            <span class="article-read-time">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <div class="article-category">Philosophy</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">The Warrior Ethos</h3>
+                        <p class="article-excerpt">Ancient principles of honor, discipline, and purpose for the modern man.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Nov 22, 2025</span>
+                            <span class="article-read-time">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join the Brotherhood</h2>
+                <p>Receive weekly insights on adventure, leadership, and living with purpose.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" class="newsletter-input" required>
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>King Test</h3>
+                    <p>A digital magazine for men pursuing excellence in adventure, innovation, conquest, leadership, and philosophy.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#adventure">Adventure</a></li>
+                        <li><a href="#innovation">Innovation</a></li>
+                        <li><a href="#conquest">Conquest</a></li>
+                        <li><a href="#leadership">Leadership</a></li>
+                        <li><a href="#philosophy">Philosophy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contribute">Write for Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="YouTube">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 King Test. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
