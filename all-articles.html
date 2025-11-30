@@ -487,8 +487,19 @@
             searchButton = document.getElementById('searchButton');
             
             if (grid) {
-                renderArticles();
-                addClickHandlers();
+                // Check if there's a category parameter in the URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const categoryParam = urlParams.get('category');
+                
+                if (categoryParam) {
+                    // Filter by the category from URL
+                    filterByCategory(categoryParam);
+                } else {
+                    // Normal render of all articles
+                    renderArticles();
+                    addClickHandlers();
+                }
+                
                 console.log('Rendered', allArticles.length, 'articles');
                 
                 // Event listeners

@@ -254,15 +254,23 @@ if (searchInput) {
 }
 
 // ===================================
-// Category Filtering - Redirect to All Articles Page
+// Category Filtering - Redirect to All Articles Page with Category
 // ===================================
 document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', function(e) {
         // Don't trigger if clicking the link directly
         if (e.target.classList.contains('category-link')) return;
         
-        // Redirect to all articles page for filtering
-        window.location.href = 'all-articles.html';
+        // Get category name from the card's id or text
+        const categoryTitle = this.querySelector('h3');
+        if (categoryTitle) {
+            const category = categoryTitle.textContent.trim();
+            // Redirect to all articles page with category parameter
+            window.location.href = `all-articles.html?category=${encodeURIComponent(category)}`;
+        } else {
+            // Fallback to just going to all articles
+            window.location.href = 'all-articles.html';
+        }
     });
 });
 
