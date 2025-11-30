@@ -221,35 +221,13 @@ const activeFilter = document.getElementById('activeFilter');
 
 function performSearch() {
     const searchTerm = searchInput.value.toLowerCase().trim();
-    const articles = document.querySelectorAll('.article-card');
-    let visibleCount = 0;
     
     if (!searchTerm) {
-        // Show all articles
-        articles.forEach(article => {
-            article.style.display = 'block';
-        });
-        activeFilter.style.display = 'none';
         return;
     }
     
-    articles.forEach(article => {
-        const keywords = article.getAttribute('data-keywords') || '';
-        const title = article.querySelector('.article-title')?.textContent || '';
-        const excerpt = article.querySelector('.article-excerpt')?.textContent || '';
-        
-        const searchText = (keywords + ' ' + title + ' ' + excerpt).toLowerCase();
-        
-        if (searchText.includes(searchTerm)) {
-            article.style.display = 'block';
-            visibleCount++;
-        } else {
-            article.style.display = 'none';
-        }
-    });
-    
-    activeFilter.style.display = 'block';
-    activeFilter.textContent = `Found ${visibleCount} results for "${searchTerm}"`;
+    // Redirect to all articles page with search functionality
+    window.location.href = 'all-articles.html';
 }
 
 if (searchButton) {
@@ -262,48 +240,29 @@ if (searchInput) {
             performSearch();
         }
     });
+    
+    // Placeholder to indicate it will search on all articles page
+    searchInput.addEventListener('focus', function() {
+        if (!this.value) {
+            this.placeholder = 'Press enter to search all articles...';
+        }
+    });
+    
+    searchInput.addEventListener('blur', function() {
+        this.placeholder = 'Search by keyword...';
+    });
 }
 
 // ===================================
-// Category Filtering
+// Category Filtering - Redirect to All Articles Page
 // ===================================
 document.querySelectorAll('.category-card').forEach(card => {
-    const originalClickHandler = card.onclick;
-    
     card.addEventListener('click', function(e) {
         // Don't trigger if clicking the link directly
         if (e.target.classList.contains('category-link')) return;
         
-        const categoryTitle = this.querySelector('h3')?.textContent;
-        if (!categoryTitle || categoryTitle === 'All Topics') {
-            // Show all articles
-            document.querySelectorAll('.article-card').forEach(article => {
-                article.style.display = 'block';
-            });
-            activeFilter.style.display = 'none';
-            searchInput.value = '';
-        } else {
-            // Filter by category
-            const articles = document.querySelectorAll('.article-card');
-            let visibleCount = 0;
-            
-            articles.forEach(article => {
-                const articleCategory = article.getAttribute('data-category');
-                if (articleCategory === categoryTitle) {
-                    article.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    article.style.display = 'none';
-                }
-            });
-            
-            activeFilter.style.display = 'block';
-            activeFilter.textContent = `Showing ${categoryTitle} (${visibleCount} articles)`;
-            searchInput.value = '';
-            
-            // Scroll to articles
-            document.getElementById('articlesGrid').scrollIntoView({ behavior: 'smooth' });
-        }
+        // Redirect to all articles page for filtering
+        window.location.href = 'all-articles.html';
     });
 });
 
