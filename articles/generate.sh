@@ -1,0 +1,18 @@
+#!/bin/bash
+# This script helps identify which articles need to be created
+echo "Articles to create:"
+echo "1. albert-einstein.html"
+echo "2. mahatma-gandhi.html"
+echo "3. martin-luther-king-jr.html"
+echo "4. isaac-newton.html"
+echo "5. charles-darwin.html"
+echo "6. winston-churchill.html"
+echo "7. nikola-tesla.html"
+echo "8. muhammad.html"
+echo "9. confucius.html"
+echo "10. galileo-galilei.html"
+echo "11. thomas-edison.html"
+echo "12. nelson-mandela.html"
+echo "13. socrates.html"
+echo "14. henry-ford.html"
+echo "15. wright-brothers.html"

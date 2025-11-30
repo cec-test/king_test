@@ -1,0 +1,15 @@
+            <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #e0e0e0;">
+                <a href="../index.html" style="display: inline-block; padding: 14px 36px; background: #f0afe6; color: #000; font-weight: 600; border-radius: 4px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">← Back to Articles</a>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="text-align: center; padding: 24px 0;">
+                <p>&copy; 2025 Lethal Ambition. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

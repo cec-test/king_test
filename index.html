@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lethal Ambition - A modern magazine for men focused on adventure, innovation, conquest, leadership, and philosophy">
+    <meta name="keywords" content="adventure, innovation, conquest, leadership, philosophy, men's magazine">
+    <meta name="author" content="Lethal Ambition">
+    <title>Lethal Ambition | Adventure, Innovation, Conquest, Leadership & Philosophy</title>
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>LETHAL AMBITION</h1>
+            </div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search by keyword...">
+                    <button id="searchButton" class="search-button">🔍</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#adventure" class="nav-link">Adventure</a></li>
+                <li><a href="#innovation" class="nav-link">Innovation</a></li>
+                <li><a href="#conquest" class="nav-link">Conquest</a></li>
+                <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Strike With Purpose</h1>
+                <p class="hero-subtitle">Where relentless ambition meets calculated precision</p>
+                <a href="#featured" class="btn btn-primary">Explore Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Stories</h2>
+            <div class="featured-grid">
+                <article class="featured-card featured-card-large" data-article="napoleon-bonaparte">
+                    <div class="card-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(240, 175, 230, 0.05) 10px, rgba(240, 175, 230, 0.05) 20px); display: flex; align-items: center; justify-content: center;">
+                        <div class="card-category">Conquest</div>
+                        <div style="font-size: 120px; opacity: 0.15; position: absolute;">👑</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Napoleon Bonaparte - Emperor of Ambition</h3>
+                        <p class="card-excerpt">Rose from obscurity to emperor, reshaping Europe through military genius and revolutionary legal reforms.</p>
+                        <div class="card-meta">
+                            <span class="card-date">France, Empire, Strategy, Ambition</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="featured-card" data-article="steve-jobs">
+                    <div class="card-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(74,74,74,0.6)), radial-gradient(circle at 30% 50%, rgba(240, 175, 230, 0.2), transparent); display: flex; align-items: center; justify-content: center;">
+                        <div class="card-category">Innovation</div>
+                        <div style="font-size: 80px; opacity: 0.2; position: absolute;">💡</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Steve Jobs - Uncompromising Vision</h3>
+                        <p class="card-excerpt">Revolutionized personal computing, music, and mobile technology through obsessive focus on design and user experience.</p>
+                        <div class="card-meta">
+                            <span class="card-date">Apple, Innovation, Design</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="featured-card" data-article="edmund-hillary">
+                    <div class="card-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), linear-gradient(135deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a), linear-gradient(135deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a); background-size: 100% 100%, 20px 20px, 20px 20px; background-position: 0 0, 0 0, 10px 10px; display: flex; align-items: center; justify-content: center;">
+                        <div class="card-category">Adventure</div>
+                        <div style="font-size: 80px; opacity: 0.2; position: absolute;">⛰️</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Edmund Hillary - Summit of Determination</h3>
+                        <p class="card-excerpt">First confirmed climber to reach the summit of Mount Everest, embodying human determination to conquer the impossible.</p>
+                        <div class="card-meta">
+                            <span class="card-date">Everest, Mountaineering, Courage</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explore by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" id="adventure">
+                    <div class="category-icon">⛰️</div>
+                    <h3>Adventure</h3>
+                    <p>Pushing boundaries, exploring new frontiers, and embracing the unknown with courage and determination.</p>
+                    <a href="#adventure-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card" id="innovation">
+                    <div class="category-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>Cutting-edge ideas, groundbreaking technology, and the visionaries reshaping our world.</p>
+                    <a href="#innovation-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card" id="conquest">
+                    <div class="category-icon">🏆</div>
+                    <h3>Conquest</h3>
+                    <p>Achieving greatness through strategic thinking, relentless pursuit, and unwavering commitment.</p>
+                    <a href="#conquest-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card" id="leadership">
+                    <div class="category-icon">👑</div>
+                    <h3>Leadership</h3>
+                    <p>Mastering the art of influence, building powerful teams, and leading with vision and integrity.</p>
+                    <a href="#leadership-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card" id="philosophy">
+                    <div class="category-icon">📚</div>
+                    <h3>Philosophy</h3>
+                    <p>Timeless wisdom, profound questions, and the ideas that shape a meaningful and purposeful life.</p>
+                    <a href="#philosophy-articles" class="category-link">Read More →</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🎯</div>
+                    <h3>All Topics</h3>
+                    <p>Discover the full collection of stories, insights, and perspectives from King Test.</p>
+                    <a href="#all-articles" class="category-link">Explore All →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="latest-articles">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 48px;">
+                <h2 class="section-title" style="margin-bottom: 0;">Latest Articles</h2>
+                <div id="activeFilter" style="color: var(--color-accent); font-weight: 600; display: none;"></div>
+            </div>
+            <div class="articles-grid" id="articlesGrid">
+                <article class="article-card" data-article="friedrich-nietzsche" data-category="Philosophy" data-keywords="Philosophy,God,Morality,Willpower,Truth,Existentialism,Superman,Nihilism,Critique,Individualism">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(74,74,74,0.7)), url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\"50\" font-size=\"60\" opacity=\"0.1\" fill=\"%23f0afe6\">∃</text></svg>') center/cover; display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Philosophy</div>
+                        <div style="font-size: 60px; opacity: 0.15; position: absolute;">📚</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Friedrich Nietzsche - Will to Power</h3>
+                        <p class="article-excerpt">Challenged Western morality and religion, proposing the Übermensch concept and radical reevaluation of all values.</p>
+                        <div class="article-meta">
+                            <span class="article-date">God, Morality, Willpower</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="julius-caesar" data-category="Conquest" data-keywords="Rome,Conquest,Gaul,Politics,Assassination,Empire,Strategy,Rhetoric,Ambition,Rubicon">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(42,42,42,0.9)), repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(240, 175, 230, 0.08) 15px, rgba(240, 175, 230, 0.08) 30px); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Conquest</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">⚔️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Julius Caesar - Crossing the Rubicon</h3>
+                        <p class="article-excerpt">Transformed Rome from republic to empire through military brilliance, political acumen, and popular appeal.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Rome, Conquest, Strategy</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="alexander-the-great" data-category="Conquest" data-keywords="Macedonia,Conquest,Empire,Youth,Strategy,Hellenism,Persia,Legend,Tutorship,Ambition">
+                    <div class="article-image" style="background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.7)), radial-gradient(circle at 70% 30%, rgba(240, 175, 230, 0.15), transparent 60%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Conquest</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🏛️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Alexander the Great - Unstoppable Conquest</h3>
+                        <p class="article-excerpt">Conquered the known world by age 32, spreading Greek culture and creating one of history's largest empires.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Macedonia, Empire, Strategy</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="leonardo-da-vinci" data-category="Innovation" data-keywords="Renaissance,Art,Invention,Curiosity,Genius,Anatomy,Engineering,Mona-Lisa,Notebooks,Vision">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(42,42,42,0.8)), repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(240, 175, 230, 0.05) 45deg, transparent 90deg); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Innovation</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🎨</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Leonardo da Vinci - Renaissance Genius</h3>
+                        <p class="article-excerpt">Renaissance polymath who merged art and science, creating timeless masterpieces while envisioning future technologies.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Renaissance, Art, Invention</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="genghis-khan" data-category="Conquest" data-keywords="Mongolia,Empire,Horsemen,Conquest,Innovation,Meritocracy,Tactics,Legacy,Asia,Unification">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(26,26,26,0.85)), linear-gradient(45deg, transparent 48%, rgba(240, 175, 230, 0.06) 49%, rgba(240, 175, 230, 0.06) 51%, transparent 52%); background-size: 100%, 30px 30px; display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Conquest</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🐎</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Genghis Khan - Empire Builder</h3>
+                        <p class="article-excerpt">United Mongol tribes to build the largest contiguous land empire through revolutionary military tactics and meritocracy.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Mongolia, Empire, Tactics</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="aristotle" data-category="Philosophy" data-keywords="Logic,Ethics,Philosophy,Science,Teaching,Reason,Politics,Metaphysics,Knowledge,Influence">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(42,42,42,0.8)), radial-gradient(circle at 20% 80%, rgba(240, 175, 230, 0.1), transparent 50%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Philosophy</div>
+                        <div style="font-size: 60px; opacity: 0.15; position: absolute;">🧠</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Aristotle - Architect of Knowledge</h3>
+                        <p class="article-excerpt">Systematized human knowledge across logic, ethics, politics, and natural sciences, shaping Western thought for millennia.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Logic, Ethics, Philosophy</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="ernest-shackleton" data-category="Adventure" data-keywords="Antarctica,Endurance,Leadership,Survival,Crisis,Courage,Navigation,Team,Adversity,Rescue">
+                    <div class="article-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.95)), repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(240, 175, 230, 0.03) 2px, rgba(240, 175, 230, 0.03) 4px); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Leadership</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🧊</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Ernest Shackleton - Leadership in Crisis</h3>
+                        <p class="article-excerpt">Led all 27 crew members to safety after Antarctic expedition disaster, exemplifying leadership under impossible conditions.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Antarctica, Endurance, Leadership</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="albert-einstein" data-category="Innovation" data-keywords="Relativity,Physics,E=mc²,Genius,Nobel,Quantum,Space-time,Innovation,Theory,Imagination">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(42,42,42,0.85)), radial-gradient(circle at 50% 50%, rgba(240, 175, 230, 0.12), transparent 70%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Innovation</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">⚛️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Albert Einstein - Relativity Revolutionary</h3>
+                        <p class="article-excerpt">Revolutionized physics with theory of relativity, fundamentally changing our understanding of space, time, and energy.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Relativity, E=mc², Genius</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="martin-luther-king-jr" data-category="Leadership" data-keywords="Civil-rights,Equality,Speech,Nonviolence,Justice,Dream,March,Montgomery,Courage,Legacy">
+                    <div class="article-image" style="background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(26,26,26,0.85)), radial-gradient(circle at 30% 70%, rgba(240, 175, 230, 0.1), transparent 60%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Leadership</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">✊</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Martin Luther King Jr. - Dream Maker</h3>
+                        <p class="article-excerpt">Advanced civil rights through powerful oratory and nonviolent action, reshaping American society.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Civil Rights, Equality, Justice</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="all-articles.html" class="btn btn-primary" style="text-decoration: none;">Explore All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden articles for reference only -->
+    <div style="display: none;" id="hiddenArticles">
+        <article class="article-card" data-article="galileo-galilei">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(26,26,26,0.9)), repeating-linear-gradient(45deg, transparent 0px, transparent 8px, rgba(240, 175, 230, 0.05) 8px, rgba(240, 175, 230, 0.05) 16px); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Innovation</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🔭</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Galileo Galilei - Truth Seeker</h3>
+                        <p class="article-excerpt">Championed heliocentrism and pioneered telescopic astronomy, establishing experimental science despite persecution.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Telescope, Astronomy, Courage</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="thomas-edison">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(42,42,42,0.85)), radial-gradient(circle at 70% 30%, rgba(240, 175, 230, 0.12), transparent 65%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Innovation</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">💡</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Thomas Edison - Persistent Inventor</h3>
+                        <p class="article-excerpt">Invented the practical light bulb and phonograph, creating the first industrial research laboratory.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Light Bulb, Invention, Persistence</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="nelson-mandela">
+                    <div class="article-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.95)), linear-gradient(45deg, transparent 30%, rgba(240, 175, 230, 0.06) 30%, rgba(240, 175, 230, 0.06) 70%, transparent 70%); background-size: 100%, 40px 40px; display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Leadership</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">✌️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Nelson Mandela - Forgiveness Force</h3>
+                        <p class="article-excerpt">Emerged from 27 years imprisonment to lead South Africa from apartheid to democracy through reconciliation.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Apartheid, Freedom, Reconciliation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="socrates">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(74,74,74,0.8)), repeating-linear-gradient(90deg, transparent, transparent 12px, rgba(240, 175, 230, 0.05) 12px, rgba(240, 175, 230, 0.05) 24px); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Philosophy</div>
+                        <div style="font-size: 60px; opacity: 0.15; position: absolute;">🏛️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Socrates - Question Everything</h3>
+                        <p class="article-excerpt">Pioneered critical thinking and the Socratic method, laying foundations for Western philosophy through relentless questioning.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Philosophy, Questions, Wisdom</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="henry-ford">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(26,26,26,0.9)), linear-gradient(0deg, transparent 40%, rgba(240, 175, 230, 0.05) 40%, rgba(240, 175, 230, 0.05) 60%, transparent 60%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Innovation</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🚗</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Henry Ford - Assembly Innovator</h3>
+                        <p class="article-excerpt">Revolutionized manufacturing with assembly line production, making automobiles affordable and transforming industry.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Assembly Line, Model T, Revolution</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="wright-brothers">
+                    <div class="article-image" style="background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(42,42,42,0.7)), radial-gradient(circle at 50% 60%, rgba(240, 175, 230, 0.1), transparent 60%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Adventure</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">✈️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Wright Brothers - Flight Pioneers</h3>
+                        <p class="article-excerpt">Achieved first powered flight through methodical experimentation, opening the age of aviation.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Flight, Aviation, Kitty Hawk</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="attila-the-hun" data-category="Conquest" data-keywords="Huns,Terror,Rome,Cavalry,Conquest,Tribute,Raids,Barbarian,Invasion,Scourge">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(42,42,42,0.8)), repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(240, 175, 230, 0.08) 15px, rgba(240, 175, 230, 0.08) 30px); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Conquest</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🐎</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Attila the Hun - Scourge of Rome</h3>
+                        <p class="article-excerpt">Terrorized the Roman Empire with ruthless cavalry tactics, extracting massive tribute through fear.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Huns, Terror, Cavalry</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="john-d-rockefeller" data-category="Innovation" data-keywords="Oil,Monopoly,Wealth,Ruthless,Standard-Oil,Competition,Titan,Industry,Dominance,Tycoon">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(26,26,26,0.95)), radial-gradient(circle at 70% 30%, rgba(240, 175, 230, 0.15), transparent 60%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Innovation</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">💰</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">John D. Rockefeller - Monopoly Architect</h3>
+                        <p class="article-excerpt">Built Standard Oil into America's first monopoly through ruthless competition and strategic dominance.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Oil, Monopoly, Dominance</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="hernan-cortes" data-category="Conquest" data-keywords="Conquistador,Aztec,Mexico,Conquest,Audacity,Gold,Empire,Destruction,Strategy,Ruthless">
+                    <div class="article-image" style="background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(42,42,42,0.85)), linear-gradient(45deg, transparent 45%, rgba(240, 175, 230, 0.1) 45%, rgba(240, 175, 230, 0.1) 55%, transparent 55%); background-size: 100%, 30px 30px; display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Conquest</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">⚔️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Hernán Cortés - Audacious Conqueror</h3>
+                        <p class="article-excerpt">Conquered the Aztec Empire with 600 men through cunning alliances and psychological warfare.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Conquistador, Aztec, Strategy</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="andrew-carnegie" data-category="Innovation" data-keywords="Steel,Industry,Wealth,Competition,Integration,Labor,Philanthropy,Ruthless,Empire,Tycoon">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(74,74,74,0.85)), repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(240, 175, 230, 0.06) 10px, rgba(240, 175, 230, 0.06) 20px); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Innovation</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🏭</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Andrew Carnegie - Steel Magnate</h3>
+                        <p class="article-excerpt">Dominated American steel industry through vertical integration and ruthless cost-cutting efficiency.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Steel, Industry, Ruthless</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="jp-morgan" data-category="Leadership" data-keywords="Banking,Finance,Power,Trusts,Wall-Street,Consolidation,Influence,Control,Capital,Empire">
+                    <div class="article-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(26,26,26,0.85)), radial-gradient(circle at 40% 40%, rgba(240, 175, 230, 0.12), transparent 70%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Leadership</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🏦</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">J.P. Morgan - Financial Titan</h3>
+                        <p class="article-excerpt">Consolidated American finance into massive trusts, wielding power to bail out the US government itself.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Banking, Finance, Power</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="cornelius-vanderbilt" data-category="Innovation" data-keywords="Railroads,Shipping,Ruthless,Competition,Commodore,Transportation,Wealth,Monopoly,Power,Empire">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(42,42,42,0.9)), linear-gradient(90deg, transparent 40%, rgba(240, 175, 230, 0.07) 40%, rgba(240, 175, 230, 0.07) 60%, transparent 60%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Innovation</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🚂</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Cornelius Vanderbilt - Railroad Baron</h3>
+                        <p class="article-excerpt">Built transportation empire through shipping and railroads using price wars and crushing competition.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Railroads, Ruthless, Empire</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="shaka-zulu" data-category="Conquest" data-keywords="Zulu,Military,Tactics,Conquest,Discipline,Africa,Innovation,Warfare,Empire,Ruthless">
+                    <div class="article-image" style="background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.85)), repeating-linear-gradient(45deg, transparent 0px, transparent 12px, rgba(240, 175, 230, 0.08) 12px, rgba(240, 175, 230, 0.08) 24px); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Conquest</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">🛡️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Shaka Zulu - Military Innovator</h3>
+                        <p class="article-excerpt">Transformed Zulu tribe into military machine through brutal discipline and revolutionary tactics.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Zulu, Military, Tactics</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="tamerlane" data-category="Conquest" data-keywords="Conquest,Terror,Empire,Destruction,Skulls,Ruthless,Central-Asia,Slaughter,Ambition,Legacy">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(26,26,26,0.9)), radial-gradient(circle at 25% 75%, rgba(240, 175, 230, 0.1), transparent 60%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Conquest</div>
+                        <div style="font-size: 60px; opacity: 0.15; position: absolute;">☠️</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Tamerlane - Terror Incarnate</h3>
+                        <p class="article-excerpt">Built empire through systematic terror and mass slaughter, erecting pyramids of skulls to surpass Genghis Khan.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Conquest, Terror, Ruthless</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="alexander-hamilton" data-category="Leadership" data-keywords="Finance,Federalist,Banking,Ambition,Duel,Constitution,Power,Economy,Politics,Vision">
+                    <div class="article-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(42,42,42,0.9)), repeating-linear-gradient(90deg, transparent, transparent 14px, rgba(240, 175, 230, 0.06) 14px, rgba(240, 175, 230, 0.06) 28px); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Leadership</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">📜</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Alexander Hamilton - Founding Architect</h3>
+                        <p class="article-excerpt">Architect of American financial system who ruthlessly centralized federal power and established national bank.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Finance, Federalist, Vision</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-article="cecil-rhodes" data-category="Conquest" data-keywords="Diamonds,Colonialism,Africa,Rhodesia,Empire,Mining,Wealth,Expansion,Ambition,Domination">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(74,74,74,0.85)), radial-gradient(circle at 60% 40%, rgba(240, 175, 230, 0.15), transparent 65%); display: flex; align-items: center; justify-content: center;">
+                        <div class="article-category">Conquest</div>
+                        <div style="font-size: 60px; opacity: 0.2; position: absolute;">💎</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Cecil Rhodes - Colonial Titan</h3>
+                        <p class="article-excerpt">Built diamond empire in Africa through exploitation and conquest, literally naming countries after himself.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Diamonds, Colonialism, Empire</span>
+                        </div>
+                    </div>
+                </article>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join the Elite</h2>
+                <p>Receive weekly insights on ambition, strategy, and achieving greatness.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" class="newsletter-input" required>
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lethal Ambition</h3>
+                    <p>A digital magazine for men pursuing excellence in adventure, innovation, conquest, leadership, and philosophy.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#adventure">Adventure</a></li>
+                        <li><a href="#innovation">Innovation</a></li>
+                        <li><a href="#conquest">Conquest</a></li>
+                        <li><a href="#leadership">Leadership</a></li>
+                        <li><a href="#philosophy">Philosophy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contribute">Write for Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="YouTube">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lethal Ambition. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
