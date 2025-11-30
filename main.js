@@ -215,5 +215,5 @@ window.addEventListener('scroll', debouncedScrollHandler);
 // ===================================
 // Console Welcome Message
 // ===================================
-console.log('%c USURPER ', 'background: #b8a583; color: #0a0a0a; font-size: 20px; font-weight: bold; padding: 10px;');
-console.log('%c Welcome to Usurper - Seize your throne ', 'color: #b8a583; font-size: 14px;');
+console.log('%c LETHAL AMBITION ', 'background: #f0afe6; color: #000000; font-size: 20px; font-weight: bold; padding: 10px;');
+console.log('%c Welcome to Lethal Ambition - Strike with purpose ', 'color: #f0afe6; font-size: 14px;');

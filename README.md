@@ -1,10 +1,10 @@
-# USURPER
+# LETHAL AMBITION
 
 A modern digital magazine for men pursuing excellence in adventure, innovation, conquest, leadership, and philosophy.
 
 ## 🎯 Overview
 
-Usurper is a premium online magazine designed to inspire and educate men who are committed to personal growth, achievement, and living with purpose. Our content spans five core pillars:
+Lethal Ambition is a premium online magazine designed to inspire and educate men who are committed to personal growth, achievement, and living with purpose. Our content spans five core pillars:
 
 - **⛰️ Adventure** - Pushing boundaries and exploring new frontiers
 - **💡 Innovation** - Cutting-edge ideas and groundbreaking technology
@@ -47,11 +47,11 @@ king_test/
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary**: #0a0a0a (Black)
-- **Secondary**: #4a5f7a (Muted Navy Blue)
-- **Accent**: #b8a583 (Light Muted Gold)
+- **Primary**: #000000 (Black)
+- **Secondary**: #4a4a4a (Gray)
+- **Accent**: #f0afe6 (Pink)
 - **Text**: #1a1a1a (Near Black)
-- **Background**: #faf9f6 (Off-White)
+- **Background**: #ffffff (White)
 
 ### Typography
 - **Headings**: Playfair Display (Serif)
@@ -122,9 +122,9 @@ Edit the CSS variables in `styles.css`:
 
 ```css
 :root {
-    --color-primary: #0a0a0a;
-    --color-secondary: #4a5f7a;
-    --color-accent: #b8a583;
+    --color-primary: #000000;
+    --color-secondary: #4a4a4a;
+    --color-accent: #f0afe6;
     /* Add your custom colors */
 }
 ```
@@ -170,4 +170,4 @@ For questions or feedback, please open an issue on GitHub.
 
 ---
 
-**Built with passion for excellence** | © 2025 Usurper
+**Built with passion for excellence** | © 2025 Lethal Ambition

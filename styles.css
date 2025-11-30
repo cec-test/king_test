@@ -2,14 +2,14 @@
    CSS Variables & Reset
    =================================== */
 :root {
-    --color-primary: #0a0a0a;
-    --color-secondary: #4a5f7a;
-    --color-accent: #b8a583;
+    --color-primary: #000000;
+    --color-secondary: #4a4a4a;
+    --color-accent: #f0afe6;
     --color-text: #1a1a1a;
-    --color-text-light: #5a5a5a;
-    --color-background: #faf9f6;
-    --color-background-alt: #f0efeb;
-    --color-border: #d4d2cc;
+    --color-text-light: #666666;
+    --color-background: #ffffff;
+    --color-background-alt: #f5f5f5;
+    --color-border: #e0e0e0;
     
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
@@ -78,7 +78,6 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding: 16px 24px;
-    min-height: 110px;
 }
 
 .logo h1 {
@@ -89,13 +88,6 @@ ul {
     letter-spacing: 2px;
 }
 
-.logo img {
-    height: 100px;
-    width: auto;
-    display: block;
-    max-width: 350px;
-    object-fit: contain;
-}
 
 .nav-menu {
     display: flex;
@@ -159,7 +151,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a2332 100%);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     overflow: hidden;
 }
 
@@ -171,8 +163,8 @@ ul {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(184, 165, 131, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(74, 95, 122, 0.15) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(240, 175, 230, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(240, 175, 230, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -235,7 +227,7 @@ ul {
 }
 
 .btn-primary:hover {
-    background-color: #c9b695;
+    background-color: #f4c4eb;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -309,7 +301,7 @@ ul {
 
 .card-image {
     height: 250px;
-    background: linear-gradient(135deg, #4a5f7a 0%, #2a3d4f 100%);
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
     position: relative;
     overflow: hidden;
 }
@@ -420,9 +412,6 @@ ul {
 
 .category-link:hover {
     color: var(--color-accent);
-}
-
-.category-link:hover {
     transform: translateX(4px);
 }
 
@@ -456,7 +445,7 @@ ul {
 
 .article-image {
     height: 200px;
-    background: linear-gradient(135deg, #4a5f7a 0%, #2a3d4f 100%);
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
     position: relative;
 }
 
@@ -505,7 +494,7 @@ ul {
    =================================== */
 .newsletter {
     padding: 80px 0;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a2332 100%);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     color: #ffffff;
 }
 
